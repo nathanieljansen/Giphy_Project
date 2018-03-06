@@ -1,16 +1,28 @@
-
+var foodGifs = ["I Need Food", "So Much Food", "Where's My Coffee", "It's Time for a Drink"];
 
 $(function () {
-  var stPatrickGiphs = ["I Need Food", "So Much Food", "Where's My Coffee", "It's Time for a Drink"];
   console.log("Ready!") 
+
+  function getThoseGifs() {
+    var gif = $(this).attr("data-name");;
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=evVnm9XTmNBnX1XJi9IeDYkptevRw8it&q=" + foodGifs + "&limit=25&offset=0&rating=G&lang=en";
+    
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function (response) {
+      console.log(response);
+    });
+  }
+  
   function createButtons(){
     $(".buttonSection").empty();
   // Looping through the array of movies
-  for (var i = 0; i < stPatrickGiphs.length; i++) {
+  for (var i = 0; i < foodGifs.length; i++) {
     var a = $("<button>");
     a.addClass("giphyButton");
-    a.attr("data-name", stPatrickGiphs[i]);
-    a.text(stPatrickGiphs[i]);
+    a.attr("data-name", foodGifs[i]);
+    a.text(foodGifs[i]);
     $(".buttonSection").append(a);
     $("#giphyInput").val("");
   }
@@ -23,9 +35,10 @@ $("#addGiphy").on("click", function(event){
     alert("Put in some text")
     return false;
   }
-  stPatrickGiphs.push(gif);
+  foodGifs.push(gif);
   createButtons();
 });
-createButtons();
-  
+
+  $(document).on("click", ".giphyButton", getThoseGifs);
+  createButtons();
 });
