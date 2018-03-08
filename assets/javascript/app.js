@@ -11,6 +11,7 @@ $(function () {
       url: queryURL,
       method: "GET"
     }).then(function (response) {
+      $(".gifArea").empty();
       console.log(response.data);
 
       var results = response.data;
@@ -49,7 +50,7 @@ $(function () {
     a.text(foodGifs[i]);
     $(".buttonSection").append(a);
     $("#giphyInput").val("");
-    $("gifArea").empty();
+    
   }
 }
 
@@ -61,6 +62,7 @@ $("#addGiphy").on("click", function(event){
     return false;
   }
   foodGifs.push(gif);
+  
   createButtons();
 });
 
