@@ -35,7 +35,6 @@ $(function () {
 
           gifDiv.append(p);
           gifDiv.append(gifImage);
-
           $(".gifArea").prepend(gifDiv);
         }
     });
@@ -50,6 +49,7 @@ $(function () {
     a.text(foodGifs[i]);
     $(".buttonSection").append(a);
     $("#giphyInput").val("");
+    $("gifArea").empty();
   }
 }
 
