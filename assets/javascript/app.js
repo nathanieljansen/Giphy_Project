@@ -5,19 +5,44 @@ $(function () {
 
   function getThoseGifs() {
     var gif = $(this).attr("data-name");;
-    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=evVnm9XTmNBnX1XJi9IeDYkptevRw8it&q=" + foodGifs + "&limit=25&offset=0&rating=G&lang=en";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=evVnm9XTmNBnX1XJi9IeDYkptevRw8it&q=" + gif + "&limit=25&offset=0&rating=G&lang=en";
     
     $.ajax({
       url: queryURL,
       method: "GET"
     }).then(function (response) {
-      console.log(response);
+      console.log(response.data);
+
+      var results = response.data;
+
+        console.log(results);
+
+        // =============== put step 2 in between these dashes ==================
+
+        // ========================
+
+        for (var i = 0; i < results.length; i++) {
+          console.log(results)
+          var gifDiv = $("<div>");
+
+          // var rating = results[i].rating;
+
+          var p = $("<p>").text("Rating: " + results[i].rating);
+
+          var gifImage = $("<img>");
+
+          gifImage.attr("src", results[i].images.fixed_height.url);
+
+          gifDiv.append(p);
+          gifDiv.append(gifImage);
+
+          $(".gifArea").prepend(gifDiv);
+        }
     });
   }
   
   function createButtons(){
     $(".buttonSection").empty();
-  // Looping through the array of movies
   for (var i = 0; i < foodGifs.length; i++) {
     var a = $("<button>");
     a.addClass("giphyButton");
@@ -42,3 +67,4 @@ $("#addGiphy").on("click", function(event){
   $(document).on("click", ".giphyButton", getThoseGifs);
   createButtons();
 });
+
