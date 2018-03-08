@@ -18,15 +18,11 @@ $(function () {
 
         console.log(results);
 
-        // =============== put step 2 in between these dashes ==================
-
-        // ========================
 
         for (var i = 0; i < results.length; i++) {
           console.log(results)
           var gifDiv = $("<div>");
 
-          // var rating = results[i].rating;
 
           var p = $("<p>").text("Rating: " + results[i].rating);
 
