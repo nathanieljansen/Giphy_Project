@@ -1,4 +1,4 @@
-var foodGifs = ["Batman", "Superman", "The Joker", "Green Goblin", "Wolverine"];
+var foodGifs = ["BATMAN", "SUPERMAN", "THE JOKER", "WONDER WOMAN", "WOLVERINE", "HARLEY QUINN"];
 
 $(function () {
   console.log("Ready!") 
@@ -52,7 +52,7 @@ $(function () {
 
 $("#addGiphy").on("click", function(event){
   event.preventDefault();
-  var gif = $("#giphyInput").val().trim();
+  var gif = $("#giphyInput").val().trim().toUpperCase();
   if ($.trim($("#giphyInput").val()) === "") {
     alert("Put in some text")
     return false;

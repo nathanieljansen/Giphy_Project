@@ -1,12 +1,14 @@
 body {
-  font-family: 'Acme', sans-serif;
+  font-family: 'Coming Soon', sans-serif;
 }
 
 button, #addGiphy {
   margin: 10px;
   padding: 10px;
+  background: url ("https://png.pngtree.com/thumb_back/fw800/back_pic/04/49/94/23585bf753402c5.jpg")
 }
 
 p {
   background: white;
 }
+
