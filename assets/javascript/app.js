@@ -1,4 +1,4 @@
-var foodGifs = ["I Need Food", "So Much Food", "Where's My Coffee", "It's Time for a Drink"];
+var foodGifs = ["Batman", "Superman", "The Joker", "Green Goblin", "Wolverine"];
 
 $(function () {
   console.log("Ready!") 

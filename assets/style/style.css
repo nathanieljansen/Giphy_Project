@@ -7,6 +7,6 @@ button, #addGiphy {
   padding: 10px;
 }
 
-.jumbotron {
-  background-color: transparent !important;
+p {
+  background: white;
 }
