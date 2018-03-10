@@ -8,7 +8,28 @@ button, #addGiphy {
   background: url ("https://png.pngtree.com/thumb_back/fw800/back_pic/04/49/94/23585bf753402c5.jpg")
 }
 
-p {
-  background: white;
+.jumbotron {
+  background-color: #7daf7d;
 }
 
+p {
+  background: #f3e264;
+}
+
+.gifArea {
+  margin: 20px
+}
+
+img {
+  margin-bottom: 10px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 60px;
+  background-color: #d4483e;
+  font-size: 40px;
+}
