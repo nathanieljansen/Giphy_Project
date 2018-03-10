@@ -10,18 +10,16 @@ button, #addGiphy {
 
 .jumbotron {
   background-color: #7daf7d;
+  width: 100%;
 }
 
 p {
   background: #f3e264;
 }
 
-.gifArea {
-  margin: 20px
-}
 
 img {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .footer {
@@ -31,5 +29,5 @@ img {
   height: 50px;
   line-height: 60px;
   background-color: #d4483e;
-  font-size: 40px;
+  font-size: 20px;
 }
