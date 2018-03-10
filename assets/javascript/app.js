@@ -28,7 +28,7 @@ $(function () {
 
           var gifImage = $("<img>");
 
-          gifImage.attr("src", results[i].images.fixed_height.url);
+          gifImage.attr("src", results[i].images.fixed_width.url);
 
           gifDiv.append(p);
           gifDiv.append(gifImage);
