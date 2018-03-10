@@ -8,15 +8,17 @@ button, #addGiphy {
   background: url ("https://png.pngtree.com/thumb_back/fw800/back_pic/04/49/94/23585bf753402c5.jpg")
 }
 
+
 .jumbotron {
   background-color: #7daf7d;
-  width: 100%;
+  /* left: 0; */
+  /* min-width: 100%; */
+  /* min-height: 100%; */
 }
 
 p {
   background: #f3e264;
 }
-
 
 img {
   margin-bottom: 15px;
