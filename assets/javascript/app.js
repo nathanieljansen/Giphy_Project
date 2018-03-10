@@ -21,7 +21,7 @@ $(function () {
 
         for (var i = 0; i < results.length; i++) {
           console.log(results)
-          var gifDiv = $("<div class='col-md-12 col-sm-12 col-12'>");
+          var gifDiv = $("<div class='col-md-6 col-sm-12 col-12'>");
 
 
           var p = $("<p>").text("Rating: " + results[i].rating);
