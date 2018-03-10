@@ -21,14 +21,14 @@ $(function () {
 
         for (var i = 0; i < results.length; i++) {
           console.log(results)
-          var gifDiv = $("<div class='col-md-4 col-sm-12 col-12'>");
+          var gifDiv = $("<div class='col-md-12 col-sm-12 col-12'>");
 
 
           var p = $("<p>").text("Rating: " + results[i].rating);
 
           var gifImage = $("<img>");
 
-          gifImage.attr("src", results[i].images.fixed_width.url);
+          gifImage.attr("src", results[i].images.fixed_height.url);
 
           gifDiv.append(p);
           gifDiv.append(gifImage);

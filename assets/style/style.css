@@ -1,8 +1,10 @@
 body {
   background: url("https://www.wallpapersin4k.org/wp-content/uploads/2017/04/Black-And-White-Comic-Book-Wallpaper-2.jpg");
-  background-position: center;
+
+
   font-family: 'Coming Soon', sans-serif;
 }
+
 
 button, #addGiphy {
   margin: 10px;
