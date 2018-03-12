@@ -72,19 +72,19 @@ $(function () {
   createButtons();
 
 
-  $(document).on("click", ".work",function () {
-    console.log("working")
-    var state = $(this).attr("data-state");
+  // $(document).on("click", ".work",function () {
+  //   console.log("working")
+  //   var state = $(this).attr("data-state");
     
-      if (state == "still") {
-        $(this).attr("src", $(this).data("move"))
-        $(this).attr("data-state", "move");
-      }
-      else {
-        $(this).attr("src", $(this).data("still"))
-        $(this).attr("data-state", "still");
-      }
-    })
+  //     if (state == "still") {
+  //       $(this).attr("src", $(this).data("move"))
+  //       $(this).attr("data-state", "move");
+  //     }
+  //     else {
+  //       $(this).attr("src", $(this).data("still"))
+  //       $(this).attr("data-state", "still");
+  //     }
+  //   })
 
 });
 
