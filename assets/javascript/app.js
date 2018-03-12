@@ -23,19 +23,24 @@ $(function () {
           console.log(results)
           var gifDiv = $("<div class='col-md-6 col-sm-12 col-12'>");
 
-
           var p = $("<p>").text("Rating: " + results[i].rating);
 
           var gifImage = $("<img>");
 
-          gifImage.attr("src", results[i].images.fixed_width.url);
-
+          gifImage.attr("src", results[i].images.fixed_width_still.url);
+          gifImage.attr("data-still", results[i].images.fixed_width_still.url);
+          gifImage.attr("data-move", results[i].images.fixed_width.url);
+          gifImage.attr("data-state", "still");
+          gifImage.addClass("work");
           gifDiv.append(p);
           gifDiv.append(gifImage);
+         
           $(".gifArea").prepend(gifDiv);
-        }
+          
+        }  
     });
   }
+  
   
   function createButtons(){
     $(".buttonSection").empty();
@@ -46,23 +51,41 @@ $(function () {
     a.text(foodGifs[i]);
     $(".buttonSection").append(a);
     $("#giphyInput").val("");
-    
   }
 }
 
-$("#addGiphy").on("click", function(event){
-  event.preventDefault();
-  var gif = $("#giphyInput").val().trim().toUpperCase();
-  if ($.trim($("#giphyInput").val()) === "") {
-    alert("Put in some text")
-    return false;
-  }
-  foodGifs.push(gif);
+  $("#addGiphy").on("click", function (event) {
+    event.preventDefault();
+    var gif = $("#giphyInput").val().trim().toUpperCase();
+    if ($.trim($("#giphyInput").val()) === "") {
+      alert("Put in some text")
+      return false;
+    }
   
-  createButtons();
-});
+    foodGifs.push(gif);
+
+    createButtons();
+  });
+
 
   $(document).on("click", ".giphyButton", getThoseGifs);
   createButtons();
+
+
+  $(document).on("click", ".work",function () {
+    console.log("working")
+    var state = $(this).attr("data-state");
+    
+      if (state == "still") {
+        $(this).attr("src", $(this).data("move"))
+        $(this).attr("data-state", "move");
+      }
+      else {
+        $(this).attr("src", $(this).data("still"))
+        $(this).attr("data-state", "still");
+      }
+    })
+
 });
+
 
