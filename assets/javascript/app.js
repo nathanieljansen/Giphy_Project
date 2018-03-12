@@ -12,7 +12,6 @@ $(function () {
       method: "GET"
     }).then(function (response) {
       $(".gifArea").empty();
-      console.log(response.data);
 
       var results = response.data;
 
@@ -58,8 +57,9 @@ $(function () {
     event.preventDefault();
     var gif = $("#giphyInput").val().trim().toUpperCase();
     if ($.trim($("#giphyInput").val()) === "") {
-      alert("Put in some text")
+      alert("That's Not A Superhero");
       return false;
+
     }
 
     foodGifs.push(gif);
